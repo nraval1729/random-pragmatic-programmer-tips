@@ -1,8 +1,9 @@
 import pickle
 import random
+import sys
 
 def main():
-	with open("pragmatic_tips.p", "rb") as p:
+	with open(sys.argv[1], "rb") as p:
 		tip_to_description = pickle.load(p)
 
 	random_tip = random.choice(tip_to_description.keys())
